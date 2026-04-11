@@ -1,38 +1,22 @@
 # cat-alog
 
-This template should help get you started developing with Vue 3 in Vite.
+This project was created to demo where Vue can be useful in a basic application.
 
-## Recommended IDE Setup
+## Prerequisites
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- [Node.js](https://nodejs.org/) **20.19+** or **22.12+** (see `package.json` → `engines`).
 
-## Recommended Browser Setup
+If you want to start a new Vue project from scratch, use the official tool:
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+```bash
+npm create vue@latest
+```
 
-## Customize configuration
+## Run the app
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+From this project’s root directory:
 
-## Project Setup
-
-```sh
+```bash
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
 ```

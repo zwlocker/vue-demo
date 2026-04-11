@@ -6,14 +6,14 @@ const cats = ref([])
 const featuredCat = ref(null)
 
 onMounted(async () => {
-  const res = await fetch('https://api.thecatapi.com/v1/images/search?limit=5')
+  const res = await fetch('https://api.thecatapi.com/v1/images/search?limit=10')
   cats.value = await res.json()
   featuredCat.value = cats.value[0]
 })
 </script>
 
 <template>
-  <div class="surface">
+  <div class="pattern">
     <OpenBookTemplate>
       <template #left>
         <div class="left-inner">
@@ -21,10 +21,10 @@ onMounted(async () => {
           <div class="thumbnails">
             <button
               v-for="cat in cats"
-              :key="cat.id"
+              v-bind:key="cat.id"
               type="button"
               class="thumb"
-              @click="featuredCat = cat"
+              v-on:click="featuredCat = cat"
             >
               <img :src="cat.url" alt="" />
             </button>
@@ -33,7 +33,7 @@ onMounted(async () => {
       </template>
       <template v-slot:right>
         <div v-if="featuredCat" class="featured">
-          <img :src="featuredCat.url" alt="Featured cat" />
+          <img v-bind:src="featuredCat.url" alt="Featured cat" />
           <p class="caption">Featured Cat</p>
         </div>
       </template>
@@ -42,7 +42,7 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-.surface {
+.pattern {
   min-height: 100vh;
   position: relative;
   background-color: #dacbb6;
