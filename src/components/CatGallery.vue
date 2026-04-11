@@ -2,12 +2,12 @@
 import { ref, onMounted } from 'vue'
 import OpenBookTemplate from './OpenBookTemplate.vue'
 
-const cats = ref([])
+const cats = 
 const featuredCat = ref(null)
 
 onMounted(async () => {
   const res = await fetch('https://api.thecatapi.com/v1/images/search?limit=10')
-  cats.value = await res.json()
+   = await res.json()
   featuredCat.value = cats.value[0]
 })
 </script>
@@ -20,11 +20,11 @@ onMounted(async () => {
           <p class="page-label">Vue Cat-alog</p>
           <div class="thumbnails">
             <button
-              v-for="cat in cats"
+              v-for=""
               v-bind:key="cat.id"
               type="button"
               class="thumb"
-              v-on:click="featuredCat = cat"
+              v-on:click=""
             >
               <img :src="cat.url" alt="" />
             </button>
@@ -33,7 +33,7 @@ onMounted(async () => {
       </template>
       <template v-slot:right>
         <div v-if="featuredCat" class="featured">
-          <img v-bind:src="featuredCat.url" alt="Featured cat" />
+          <img v-bind:src="" alt="Featured cat" />
           <p class="caption">Featured Cat</p>
         </div>
       </template>
@@ -104,7 +104,7 @@ onMounted(async () => {
 
 .thumb img:hover {
   border-color: #5c5348;
-  transform: scale(1.12);
+  transform: scale(0); /* Change */
 }
 
 .featured {
